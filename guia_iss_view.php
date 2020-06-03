@@ -13,8 +13,8 @@
       <tr align="center">
         <td ><img src="img/logo_Brasao.png" width="60" height="80"></td><br>
         <td >
-        <span class="cab01"  >PREFEITURA DE MUNICIPAL DE CRATEÚS</span><br>
-        <span class="cab02">Rua CORONEL ZEZE, 1141 - Bairro CENTRO - Crateús - CE - 63700-000</span><br>
+        <span class="cab01"  >Orgão destinatario</span><br>
+        <span class="cab02">Endereço - 00000-000</span><br>
         <span class="cab01"><?php //echo $CONF_SECRETARIA; ?></span><br><br>
         <span class="cab01">GUIA PARA PAGAMENTO DE IMPOSTO</span></td>
       </tr>
@@ -167,7 +167,7 @@
     <tr>
       <td colspan="6">
         <p>Cedente: 07.982.036/0001-67</p>
-        <p>PREFEITURA MUNICIPAL DE CRATEUS, Rua CORONEL ZEZE, 1141 - Bairro CENTRO - Crateús - CE - 63700-000</p>
+        <p>'Orgão Destinatario', Endereço - 00000-000</p>
       </td>
       <td>
         <p>Agência/Código Cedente</p>
