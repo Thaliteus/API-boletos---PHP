@@ -13,9 +13,10 @@
       <tr align="center">
         <td ><img src="img/logo_Brasao.png" width="60" height="80"></td><br>
         <td >
-        <span class="cab01"  >Orgão destinatario</span><br>
-        <span class="cab02">Endereço - 00000-000</span><br>
-        <span class="cab01"><?php //echo $CONF_SECRETARIA; ?></span><br><br>
+        <span class="cab01"  ><p> <?phpecho $prefeitura['entidade']?></p></span><br>
+        <span class="cab02"> <?php echo $prefeitura['endereco']?>  - <?echo $prefeitura['cep']?></span><br>
+        <span class="cab01"> <?php echo $prefeitura['email']?></span><br>
+        <span class="cab01"> <?php echo $prefeitura['nome_sec']?></span><br><br>
         <span class="cab01">GUIA PARA PAGAMENTO DE IMPOSTO</span></td>
       </tr>
     </table>
@@ -152,7 +153,7 @@
     <tr>
       <td>Banco do Brasil  - 001</td>
       <td class="febraban right" colspan="6">
-        81610000000-8 77331264201-2 80221001000-4 00002922592-7
+      <?php echo $linhad."<br>"; ?>
       </td>
     </tr>
     <tr>
@@ -167,7 +168,7 @@
     <tr>
       <td colspan="6">
         <p>Cedente: 07.982.036/0001-67</p>
-        <p>'Orgão Destinatario', Endereço - 00000-000</p>
+        <p> <?  php echo $prefeitura['entidade']?>, <?echo $prefeitura['endereco']?>  - <?echo $prefeitura['cep']?></p>
       </td>
       <td>
         <p>Agência/Código Cedente</p>
@@ -273,7 +274,7 @@
       </td>
     </tr>
     <tr>
-      <td align="center" colspan="7">Autentição Mecânica<br><?php echo $linhad; ?> <br><?php geraCodigoDeBarras($linhad); ?></td>
+      <td align="center" colspan="7">Autentição Mecânica<br><?php echo $linhad."<br>"; ?> <br><?php geraCodigoDeBarras($linha); ?></td>
       
       
     </tr>
