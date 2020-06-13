@@ -1,4 +1,8 @@
 <?php
+
+use Defuse\Crypto\Crypto;
+use Defuse\Crypto\Key;
+require './vendor/autoload.php';
 function DecToMoeda($valor){
     return number_format($valor, 2, ',', '.');
 }
@@ -181,6 +185,31 @@ function mod_11($cod){
         return $digito;
     
     }
+    
+}
+function set_senha()
+{
+   $arquivo = fopen('./checkout/chave.txt','w');
+   $key = key::createNewRandomKey();
+   $key_string = $key->saveToAsciiSafeString();
+    fwrite($arquivo,$key_string , strlen($key_string));
+    fclose($arquivo);
+    echo "OOOOOKKKKK";
+}
+function get_senha()
+{
+    $arquivo = fopen('./checkout/chave.txt','r');
+   $key_string = fread($arquivo, T_STRING);
+   $key = key::loadFromAsciiSafeString($key_string);
+    
+    fclose($arquivo);
+    return $key;
+}
+function gera_autenticador($nossonumero){
+    $crypto = new Crypto();
+    $url = '/checkout/checkout.php?identf=';
+    $url = $url.$crypto::encrypt($nossonumero,get_senha(),false);
+    return $url;
 }
 
 ?>

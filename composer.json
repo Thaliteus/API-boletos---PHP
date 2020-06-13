@@ -1,0 +1,6 @@
+{
+    "require": {
+        "defuse/php-encryption": "^2.2",
+        "simplesoftwareio/simple-qrcode": "~3"
+    }
+}
