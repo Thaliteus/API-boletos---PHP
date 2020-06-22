@@ -24,7 +24,13 @@ use BaconQrCode\Renderer\RendererStyle\RendererStyle;
 
         $id     = $get;
         $qr     = $conn->db->query("SELECT cad_contribuintes.nome,  wiss_emitir_cancelar_guia_iss.* FROM `cad_contribuintes`,wiss_emitir_cancelar_guia_iss WHERE cad_contribuintes.id = wiss_emitir_cancelar_guia_iss.id_contribuinte AND wiss_emitir_cancelar_guia_iss.id = '$id'");
+        if ($qr->num_rows != 1 ) {
+            echo '<h2> Erro de parametro <h2>';
+            return 0;
+        }
+        
         $linhas = $qr->fetch_assoc();
+       
         $qr = $conn->db->query("SELECT * FROM param_prefeitura_prefeitura");
         $prefeitura = $qr->fetch_assoc();
 
@@ -56,7 +62,7 @@ use BaconQrCode\Renderer\RendererStyle\RendererStyle;
         $codrel = '1';
         $Receita = $linhas['valor'];;
         $emissao = date('d/m/Y', strtotime($datax));
-        $valorbl = 100;
+        $valorbl = $Receita;
         $valormulta = $linhas['multa'];
         //NOSSO NUMERO E COMPOSTO PELO CONVENIO SEGUIDO POR 5 NUMEROS 
         $exercicio = substr($datax, 0, 4);

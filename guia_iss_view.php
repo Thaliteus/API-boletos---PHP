@@ -19,7 +19,7 @@
         <span class="cab01"> <?php echo $prefeitura['nome_sec']?></span><br><br>
         <span class="cab01">GUIA PARA PAGAMENTO DE IMPOSTO</span></td>
         <td ><img src="<?php echo 'checkout/qrcode/'.$id.'.svg'?>" width="100" height="100"> <br>
-              <p style="font-size: 9px;">Escaneie o QRCODE para verificar a autenticidade deste boleto ou <a href="http://<?php echo $check_out ?>">clique aqui</a></p></td><br>
+              <p style="font-size: 9px;">Escaneie o QRCODE para verificar a autenticidade deste boleto ou <a target="_blank" href="http://<?php echo $check_out ?>">clique aqui</a></p></td><br>
       </tr>
     </table>
     </td>
@@ -120,7 +120,7 @@
           <p>  -------------- </p>
 
           <p>Endereço do Fato Gerador</p>
-            <?php echo strtoupper($EndSacado.", ".$Numero); ?>
+          <?php echo $prefeitura['endereco']?>  - <?echo $prefeitura['cep']?><br>
       </td>
     </tr>
     <tr>

@@ -194,7 +194,7 @@ function set_senha()
    $key_string = $key->saveToAsciiSafeString();
     fwrite($arquivo,$key_string , strlen($key_string));
     fclose($arquivo);
-    echo "OOOOOKKKKK";
+    
 }
 function get_senha()
 {
