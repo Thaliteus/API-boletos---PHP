@@ -1,10 +1,3 @@
- 
-
-
-
-
-# Uso
-ex: http://'endereço'/'sua rota'/guia_iss.php?boleto='id do boleto'
 
 # API-boletos---PHP
 Uma API capaz de  gerar e retornar um boleto para convenio de 6 digitos do Banco do Brasil.
@@ -16,7 +9,7 @@ git clone https://github.com/Thaliteus/API-boletos---PHP.git
 ```
 
 
-### Prerequisites   
+### Prerequisites and libraries  
 
 - PHP 7.2 ou superior
 - mysqli
